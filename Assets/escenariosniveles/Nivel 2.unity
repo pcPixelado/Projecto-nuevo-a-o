@@ -704,7 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalAnts: 5
   timeLimit: 368.4
-  nextSceneName: NextScene
+  nextSceneName: MenuNiveles
   objectSpawnCooldown: 22.39
 --- !u!4 &972236694
 Transform:
@@ -1178,10 +1178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5419421406081414537, guid: 00e7c20b7ef3bcb49a714b8924a5524b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1445842948}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00e7c20b7ef3bcb49a714b8924a5524b, type: 3}
 --- !u!4 &1408432833 stripped
@@ -1252,68 +1249,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1445842947
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1408432833}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-      propertyPath: m_Name
-      value: Sake cup C
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
---- !u!4 &1445842948 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6430ec2e0c912a24ea107f474c0d1b94, type: 3}
-  m_PrefabInstance: {fileID: 1445842947}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481017567
 GameObject:
   m_ObjectHideFlags: 0
