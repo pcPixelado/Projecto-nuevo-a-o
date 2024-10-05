@@ -625,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalAnts: 1
   timeLimit: 120
-  nextSceneName: NextScene
+  nextSceneName: MenuNiveles
   objectSpawnCooldown: 3
 --- !u!4 &1033267155
 Transform:
