@@ -1,78 +1,112 @@
 using UnityEngine;
 
-public class ObjectSpawner : MonoBehaviour
+public class ObjectGrabber : MonoBehaviour
 {
-    public GameObject[] spawnableObjects; // Array de objetos que se pueden spawnear (asignar desde el inspector)
-    private GameObject selectedObject; // El objeto actualmente seleccionado para spawnear
-    private Camera mainCamera; // Cámara principal
+    private GameObject grabbedObject = null;
+    private Rigidbody grabbedRigidbody = null;
 
-    public float mouseSensitivity = 100f; // Sensibilidad del ratón para rotación
-    public float smoothTime = 0.1f; // Tiempo para suavizar la rotación
+    public float grabDistance = 5f;
+    public float throwForce = 10f;
+    public float holdDistance = 2f;
+    public float smoothTime = 0.1f;
 
-    private float xRotation = 0f; // Control de la rotación en el eje X (vertical)
-    private float yRotation = 0f; // Control de la rotación en el eje Y (horizontal)
-    private Vector2 currentRotation; // Rotación actual para suavizar
-    private Vector2 currentRotationVelocity; // Velocidad para la interpolación suave
+    public float moveSpeed = 5f;
+    public float crouchSpeed = 2.5f;
+    private Vector3 holdPositionVelocity;
+
+    private CharacterController controller;
+    private bool isCrouching = false;
+
+    private float originalHeight;
+    public float crouchHeight = 1f;
 
     void Start()
     {
-        mainCamera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked; // Bloquea el cursor en el centro de la pantalla
+        controller = GetComponent<CharacterController>();
+        originalHeight = controller.height;
     }
 
     void Update()
     {
-        HandleObjectSelection(); // Maneja la selección de objetos con 1, 2 o 3
-        HandleSpawning(); // Maneja el click y el spawn
-        HandleMouseLook(); // Controla la rotación de la cámara con el ratón
+        HandleObjectGrab();
+        HandlePlayerMovement();
+        HandleCrouch();
     }
 
-    // Maneja la selección de objetos con las teclas 1, 2 o 3
-    void HandleObjectSelection()
+    void HandleObjectGrab()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (grabbedObject == null)
         {
-            selectedObject = spawnableObjects[0]; // Selecciona el primer objeto
+            if (Input.GetMouseButtonDown(0))
+            {
+                TryGrabObject();
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else
         {
-            selectedObject = spawnableObjects[1]; // Selecciona el segundo objeto
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            selectedObject = spawnableObjects[2]; // Selecciona el tercer objeto
-        }
-    }
-
-    // Maneja el spawneo del objeto en el centro de la cámara
-    void HandleSpawning()
-    {
-        if (Input.GetMouseButtonDown(0) && selectedObject != null) // Si haces click izquierdo y hay un objeto seleccionado
-        {
-            Vector3 spawnPosition = mainCamera.transform.position + mainCamera.transform.forward * 20f; // Spawnea 10 unidades frente a la cámara
-            GameObject spawnedObject = Instantiate(selectedObject, spawnPosition, Quaternion.identity); // Instanciar el objeto
-            spawnedObject.AddComponent<Rigidbody>(); // Añadir Rigidbody para que el objeto caiga
-            spawnedObject.AddComponent<SpawnedObject>(); // Añadir el script de comportamiento del objeto spawneado
+            if (Input.GetMouseButtonUp(0))
+            {
+                ThrowObject();
+            }
+            else
+            {
+                HoldObject();
+            }
         }
     }
 
-    // Controla la rotación de la cámara con el movimiento del ratón
-    void HandleMouseLook()
+    void TryGrabObject()
     {
-        // Capturar movimiento del ratón
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-        // Actualizar rotaciones horizontal y vertical
-        yRotation += mouseX; // Rotación en el eje Y (horizontal)
-        xRotation -= mouseY; // Rotación en el eje X (vertical)
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Limitar rotación vertical entre -90 y 90 grados
+        if (Physics.Raycast(ray, out hit, grabDistance))
+        {
+            if (hit.collider.gameObject.GetComponent<Rigidbody>() != null)
+            {
+                grabbedObject = hit.collider.gameObject;
+                grabbedRigidbody = grabbedObject.GetComponent<Rigidbody>();
 
-        // Suavizar la rotación
-        currentRotation = Vector2.SmoothDamp(currentRotation, new Vector2(xRotation, yRotation), ref currentRotationVelocity, smoothTime);
+                grabbedRigidbody.useGravity = false;
+                grabbedRigidbody.velocity = Vector3.zero;
+            }
+        }
+    }
 
-        // Aplicar rotación a la cámara
-        mainCamera.transform.localRotation = Quaternion.Euler(currentRotation.x, currentRotation.y, 0f);
+    void HoldObject()
+    {
+        Vector3 targetPosition = Camera.main.transform.position + Camera.main.transform.forward * holdDistance;
+        grabbedRigidbody.MovePosition(Vector3.SmoothDamp(grabbedObject.transform.position, targetPosition, ref holdPositionVelocity, smoothTime));
+
+        grabbedObject.transform.rotation = Quaternion.identity;
+    }
+
+    void ThrowObject()
+    {
+        grabbedRigidbody.useGravity = true;
+        grabbedRigidbody.AddForce(Camera.main.transform.forward * throwForce, ForceMode.VelocityChange);
+
+        grabbedObject = null;
+        grabbedRigidbody = null;
+    }
+
+    void HandlePlayerMovement()
+    {
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * moveX + transform.forward * moveZ;
+
+        float speed = isCrouching ? crouchSpeed : moveSpeed;
+        controller.Move(move * speed * Time.deltaTime);
+    }
+
+    void HandleCrouch()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            isCrouching = !isCrouching;
+            controller.height = isCrouching ? crouchHeight : originalHeight;
+        }
     }
 }
-
