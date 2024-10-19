@@ -2675,7 +2675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69cdd6cf1957a54cb3a4482499d1232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasTouchedGround: 0
 --- !u!64 &985693232
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4278,9 +4277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabDistance: 54.9
   throwForce: 20.75
-  holdDistance: 3.22
+  holdDistance: 1.91
   smoothTime: 0.09
-  moveSpeed: 10.8
+  moveSpeed: 16.3
   crouchSpeed: 2.5
   crouchHeight: 1
 --- !u!4 &1502030360
