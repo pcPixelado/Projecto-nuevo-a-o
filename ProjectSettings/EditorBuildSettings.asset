@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenariosniveles/MenuNiveles.unity
     guid: 250d5011d4c0e074dafc945e34a8426a
+  - enabled: 1
+    path: Assets/escenariosniveles/Nivel 2.unity
+    guid: 30d816f4b8ff1f948b2f2a03fbdc6817
   m_configObjects: {}
