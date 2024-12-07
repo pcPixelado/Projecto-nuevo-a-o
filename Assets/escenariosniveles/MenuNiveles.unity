@@ -3537,7 +3537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0cfb79cb68b0146b5947dfbc9aaca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreEscena: Nivel 2
+  nombreEscena: Nivel cuarto
 --- !u!114 &692589736
 MonoBehaviour:
   m_ObjectHideFlags: 0
