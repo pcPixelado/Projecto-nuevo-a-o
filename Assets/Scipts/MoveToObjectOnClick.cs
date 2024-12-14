@@ -8,6 +8,9 @@ public class AntMovement : MonoBehaviour
     public GameObject baseDestination;
     public float baseSpeed = 3.5f;
     public float maxSpeed = 10f;
+    public float checkInterval = 0.5f; // Intervalo de tiempo para verificar movimiento
+    public float minDistance = 0.5f;  // Distancia mínima para considerar movimiento
+
     private NavMeshAgent agent;
     public GameObject targetObject;
     private bool isCarryingObject = false;
@@ -15,6 +18,9 @@ public class AntMovement : MonoBehaviour
     private bool isKnockedOver = false;
 
     private GameController gameController;
+
+    private Vector3 lastPosition;
+    private float lastCheckTime;
 
     void Start()
     {
@@ -89,10 +95,10 @@ public class AntMovement : MonoBehaviour
     {
         if (other.CompareTag("antihormiga"))
         {
-            // Rotar 180 grados en el eje Y al colisionar con "antihormiga"
-            transform.Rotate(0f, 0f, 90f);
-            this.enabled = false;
-
+            if (HasObjectMoved(other.gameObject))
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (other.CompareTag("Target"))
@@ -101,5 +107,26 @@ public class AntMovement : MonoBehaviour
             SceneManager.LoadScene("MenuNiveles");
         }
     }
-}
 
+    private bool HasObjectMoved(GameObject obj)
+    {
+        float currentTime = Time.time;
+
+        // Si no ha pasado suficiente tiempo, no comprobar movimiento
+        if (currentTime - lastCheckTime < checkInterval)
+        {
+            return false;
+        }
+
+        // Calcular distancia recorrida desde la última posición conocida
+        Vector3 currentPosition = obj.transform.position;
+        float distanceMoved = Vector3.Distance(currentPosition, lastPosition);
+
+        // Actualizar última posición y tiempo
+        lastPosition = currentPosition;
+        lastCheckTime = currentTime;
+
+        // Verificar si la distancia es suficiente
+        return distanceMoved >= minDistance;
+    }
+}
