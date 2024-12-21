@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public float timeLimit = 60f;
     private float currentTime;
     public string nextSceneName = "MenuCambiado";
-    private bool allAntsDefeated = false;
+    private bool allAntsDefeated = true;
 
     private bool canSpawnObject = true;
     public float objectSpawnCooldown = 3f;
