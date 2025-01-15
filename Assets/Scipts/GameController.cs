@@ -4,9 +4,9 @@ using System.Collections;
 
 public class GameController : MonoBehaviour
 {
-    public int totalAnts = 10;
+    public int totalAnts = 4;
     private int remainingAnts;
-    public float timeLimit = 60f;
+    public float timeLimit = 1000f;
     private float currentTime;
     public string nextSceneName = "MenuCambiado";
     private bool allAntsDefeated = true;

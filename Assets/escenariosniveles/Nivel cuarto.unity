@@ -2280,7 +2280,7 @@ MonoBehaviour:
   baseDestination: {fileID: 1118727255}
   baseSpeed: 1.07
   maxSpeed: 10
-  checkInterval: 42.9
+  checkInterval: 6.7
   minDistance: 0
   targetObject: {fileID: 715384807}
 --- !u!1001 &609293572
@@ -3632,8 +3632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb7036d082864144997d8d9db273261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalAnts: 5
-  timeLimit: 100.99
+  totalAnts: 4
+  timeLimit: 220.1
   nextSceneName: MenuCambiado
   objectSpawnCooldown: 22.39
 --- !u!4 &972236694
@@ -4387,7 +4387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7149044102d4ffe418bfc28480b28ad7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.97
+      value: 49.83
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7149044102d4ffe418bfc28480b28ad7, type: 3}
       propertyPath: m_LocalRotation.w
