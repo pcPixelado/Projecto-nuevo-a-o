@@ -6,6 +6,7 @@ public class RaycastMovement : MonoBehaviour
     public float moveUpDistance = 2f; // Cuánto sube
     public float moveDownSpeed = 2f; // Velocidad al bajar
     public float raycastDistance = 0.1f; // Distancia del raycast hacia abajo
+    public float waitTime = 1f; // Tiempo de espera antes de subir
     public LayerMask groundLayer; // Capa del suelo
 
     private Vector3 startPosition;
@@ -40,6 +41,10 @@ public class RaycastMovement : MonoBehaviour
                     transform.position -= Vector3.up * moveDownSpeed * Time.deltaTime;
                     yield return null;
                 }
+
+                // Espera antes de volver a subir
+                yield return new WaitForSeconds(waitTime);
+
                 goingUp = true;
             }
         }
