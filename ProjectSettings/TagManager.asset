@@ -9,6 +9,7 @@ TagManager:
   - Suelo
   - Ground
   - antihormiga
+  - HormigaGrande
   layers:
   - Default
   - TransparentFX
