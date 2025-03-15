@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8896ed900b33b794db71b024a07ec8a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88.16649
+      value: 88.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8896ed900b33b794db71b024a07ec8a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   moveUpDistance: 1.36
   moveDownSpeed: 4.84
   raycastDistance: 4.56
-  waitTime: 1.81
+  waitTime: 0.83
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
