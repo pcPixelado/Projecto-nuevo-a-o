@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 3.19
+  moveUpAmount: 2
   moveDownSpeed: 5.3
   raycastDistance: 5.2
   waitTime: 0.33
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 3.19
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 1.02
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 3.19
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 0.83
@@ -961,7 +961,7 @@ Transform:
   m_GameObject: {fileID: 456992185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 374.0146, y: 39.6, z: 159.8}
+  m_LocalPosition: {x: 400.11, y: 31.38, z: 86.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 3.19
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 0.51
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 3.19
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 0.12
@@ -1542,7 +1542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d434bb1c3fdcf44b8ef3604f511ff35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 273
+      value: 279
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d434bb1c3fdcf44b8ef3604f511ff35, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1550,7 +1550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d434bb1c3fdcf44b8ef3604f511ff35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -154
+      value: -927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d434bb1c3fdcf44b8ef3604f511ff35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2564,7 +2564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 3.19
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 1.15

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealthHandler : MonoBehaviour
 {
-    public HealthBar healthBar; // Arrastra el objeto de la barra de vida en el inspector
+    public HealthBar healthBar; // Arrastra el objeto de la barra de vida aquí
 
     void OnTriggerEnter(Collider other)
     {
