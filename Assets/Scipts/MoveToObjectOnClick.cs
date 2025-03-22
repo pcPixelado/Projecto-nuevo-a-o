@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class AntMovement : MonoBehaviour
 {
-    public string targetTag = "AZUCAR"; // Cambiado a "AZUCAR" como destino por defecto
+    public string targetTag = "AZUCAR"; 
     public GameObject baseDestination;
     public float baseSpeed = 3.5f;
     public float maxSpeed = 10f;
-    public float checkInterval = 0.5f; // Intervalo de tiempo para verificar movimiento
-    public float minDistance = 0.5f;  // Distancia mínima para considerar movimiento
+    public float checkInterval = 0.5f; 
+    public float minDistance = 0.5f;  
 
     private NavMeshAgent agent;
     public GameObject targetObject;
@@ -38,7 +38,7 @@ public class AntMovement : MonoBehaviour
         {
             if (targetObject == null)
             {
-                // Buscar el objeto más cercano con el tag "AZUCAR"
+                
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, 10f);
                 foreach (var hitCollider in hitColliders)
                 {
