@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -876546973899608171, guid: 18823e747d922de4ea51e04fc625cfc6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 1.36
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 1.02
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 1.36
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 1.15
@@ -1501,6 +1501,66 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071179423}
   m_Mesh: {fileID: 70948873267775455, guid: 1a6a343c11232cb4782d0da76a194c1f, type: 3}
+--- !u!1 &1121236608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1121236611}
+  - component: {fileID: 1121236610}
+  - component: {fileID: 1121236609}
+  m_Layer: 0
+  m_Name: VisualScripting SceneVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1121236609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121236608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1121236610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121236608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &1121236611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121236608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181950169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3782894956792142047, guid: 8896ed900b33b794db71b024a07ec8a2, type: 3}
@@ -1518,7 +1578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 1.36
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 0.51
@@ -1746,7 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 1.36
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 0.12
@@ -1862,7 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 1.36
+  moveUpAmount: 2
   moveDownSpeed: 4.84
   raycastDistance: 4.56
   waitTime: 0.83
@@ -2052,7 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc90eff001640cf4f918554c3b15dffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpDistance: 2.52
+  moveUpAmount: 2
   moveDownSpeed: 5.3
   raycastDistance: 5.2
   waitTime: 0.33
@@ -2072,3 +2132,4 @@ SceneRoots:
   - {fileID: 702441391}
   - {fileID: 423892512}
   - {fileID: 9414337}
+  - {fileID: 1121236611}
