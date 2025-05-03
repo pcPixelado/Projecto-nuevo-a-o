@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - antihormiga
   - HormigaGrande
+  - Enemigo
   layers:
   - Default
   - TransparentFX
