@@ -43,6 +43,9 @@ public class TriggerInteraccionUI : MonoBehaviour
             // Opcional: cerrar el panel automáticamente al salir
             if (panelInteraccion != null)
                 panelInteraccion.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
         }
     }
 
@@ -52,6 +55,8 @@ public class TriggerInteraccionUI : MonoBehaviour
         {
             if (panelInteraccion != null)
                 panelInteraccion.SetActive(!panelInteraccion.activeSelf); // Toggle
+         Cursor.lockState = CursorLockMode.None; 
+         Cursor.visible = true;  
         }
     }
 }
