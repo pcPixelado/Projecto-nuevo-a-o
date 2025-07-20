@@ -9,8 +9,7 @@ public class Tienda : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None; // Desbloquea el cursor
-        Cursor.visible = true;                  // Lo hace visible
+                        
 
         lanzallamas.SetActive(false); // Se oculta al inicio del juego
         button1.onClick.AddListener(ComprarLanzallamas);

@@ -1454,8 +1454,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06451323, y: 0.019677907, z: 0.19573416}
-  m_Center: {x: 0.001060017, y: -0.017269896, z: 0.08477176}
+  m_Size: {x: 0.04140776, y: 0.019677911, z: 0.19573416}
+  m_Center: {x: -0.010492716, y: -0.017269874, z: 0.08477177}
 --- !u!65 &444237943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2023,7 +2023,7 @@ Transform:
   m_GameObject: {fileID: 581516449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 236.70665, y: -520.3622, z: -534.6718}
+  m_LocalPosition: {x: 247.48, y: -525.02, z: -430.9}
   m_LocalScale: {x: 1.5952733, y: 1.5952733, z: 1.5952733}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3790,7 +3790,7 @@ GameObject:
   - component: {fileID: 1432630862}
   - component: {fileID: 1432630861}
   m_Layer: 5
-  m_Name: Button
+  m_Name: button1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3818,7 +3818,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3839,7 +3839,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1432630862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1851798178}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1432630862
 MonoBehaviour:
   m_ObjectHideFlags: 0
